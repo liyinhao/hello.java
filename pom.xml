@@ -9,11 +9,11 @@
         <module>example-zookeeper</module>
         <module>example-netty</module>
         <module>example-dubbo</module>
+        <module>example-spring</module>
     </modules>
     <packaging>pom</packaging>
 
     <name>parent</name>
-    <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
