@@ -10,6 +10,8 @@
         <module>example-netty</module>
         <module>example-dubbo</module>
         <module>example-spring</module>
+        <module>example-mybatis</module>
+        <module>example-druid</module>
     </modules>
     <packaging>pom</packaging>
 
