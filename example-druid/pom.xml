@@ -13,8 +13,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>example-druid-springboot</module>
-        <module>example-druid-springmvc</module>
+        <module>example-druid-simple-springboot</module>
+        <module>example-druid-complex-springboot</module>
     </modules>
 
     <properties>
