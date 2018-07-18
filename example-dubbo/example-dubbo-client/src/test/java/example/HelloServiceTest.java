@@ -19,9 +19,29 @@ public class HelloServiceTest {
 
     @Test
     public void test(){
-
         String result = remoteService.sayHello();
 
         Assert.assertTrue(StringUtils.isEquals(result, "hello dubbo"));
+    }
+
+
+    @Test
+    public void stressTest() throws Exception{
+
+        for (int i = 0; i < 100; i++) {
+
+            final int fi = i;
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+
+                    String result = remoteService.sayHello();
+
+                    System.out.println(result + ",  I am thread" + fi);
+                }
+            }, "").start();
+        }
+
+        System.in.read();
     }
 }
