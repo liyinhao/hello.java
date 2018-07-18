@@ -12,6 +12,6 @@ public class ExampleApplication {
 
     public static void main(String[] args) {
 
-        new SpringApplicationBuilder(Application.class).run(args);
+        new SpringApplicationBuilder(ExampleApplication.class).run(args);
     }
 }

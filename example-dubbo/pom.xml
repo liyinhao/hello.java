@@ -16,6 +16,7 @@
     <modules>
         <module>example-dubbo-api</module>
         <module>example-dubbo-service</module>
+        <module>example-dubbo-client</module>
     </modules>
 
     <properties>
@@ -31,15 +32,45 @@
         <dependencies>
 
             <dependency>
+                <groupId>com.alibaba.spring.boot</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>2.0.0</version>
+            </dependency>
+
+            <dependency>
                 <groupId>example</groupId>
                 <artifactId>example-dubbo-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
+            <!--<dependency>-->
+                <!--<groupId>com.alibaba</groupId>-->
+                <!--<artifactId>dubbo</artifactId>-->
+                <!--<version>2.6.1</version>-->
+            <!--</dependency>-->
+
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>2.6.1</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>1.5.10.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>1.5.10.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>1.5.10.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot</artifactId>
+                <version>1.5.10.RELEASE</version>
             </dependency>
 
             <dependency>
