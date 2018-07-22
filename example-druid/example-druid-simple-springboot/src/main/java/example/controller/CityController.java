@@ -16,12 +16,6 @@ public class CityController {
     @Resource
     private CityService cityService;
 
-
-//    @RequestMapping
-    public String hello() {
-        return "hello world";
-    }
-
     @RequestMapping("/city")
     public String city() {
         City city = cityService.getCity(1);

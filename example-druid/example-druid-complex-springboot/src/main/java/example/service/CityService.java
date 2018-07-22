@@ -1,7 +1,7 @@
 package example.service;
 
-import example.dao.CityDao;
 import example.domain.City;
+import example.manager.CityManager;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,10 +14,10 @@ import javax.annotation.Resource;
 public class CityService {
 
     @Resource
-    private CityDao cityDao;
+    private CityManager cityManager;
 
     public City getCity(int id) {
-        return cityDao.selectCityById(id);
+        return cityManager.getCityById(id);
     }
 
 }

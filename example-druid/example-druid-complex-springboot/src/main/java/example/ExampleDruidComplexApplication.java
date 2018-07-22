@@ -7,10 +7,10 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
  * Created by liyinhao on 18/7/10.
  */
 @SpringBootApplication
-public class Application {
+public class ExampleDruidComplexApplication {
 
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(Application.class).run(args);
+        new SpringApplicationBuilder(ExampleDruidComplexApplication.class).run(args);
     }
 }
