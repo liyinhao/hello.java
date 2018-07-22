@@ -38,11 +38,10 @@ public class JMXQuery {
 
         Map<String, Map<String, Object>> rtn = new HashMap<>();
 
-        final ObjectName pool;
         try {
-            pool = new ObjectName(category + ":type=" + typeName + ",*");
 
-            final Set<ObjectName> names = mbs.queryNames(pool, null);
+            ObjectName pool = new ObjectName(category + ":type=" + typeName + ",*");
+            Set<ObjectName> names = mbs.queryNames(pool, null);
 
             for (ObjectName name : names) {
 
@@ -69,13 +68,14 @@ public class JMXQuery {
                                                        String[] attributes) {
 
         List<Map<String, Object>> rtn = new ArrayList<>();
-        final ObjectName pool;
-        try {
-            pool = new ObjectName(category + ":type=" + typeName + ",*");
 
-            final Set<ObjectName> names = mbs.queryNames(pool, null);
+        try {
+
+            ObjectName pool = new ObjectName(category + ":type=" + typeName + ",*");
+            Set<ObjectName> names = mbs.queryNames(pool, null);
 
             for (ObjectName name : names) {
+
                 if (objNamePattern != null && !Pattern.matches(objNamePattern, name.getCanonicalName())) {
                     continue;
                 }
@@ -97,16 +97,18 @@ public class JMXQuery {
 
     private static Map<String, Object> queryAttribute(ObjectName name, String[] attributes) throws Exception {
 
-        Map<String, Object> result = new HashMap<String, Object>();
+        Map<String, Object> result = new HashMap<>();
 
         AttributeList list = mbs.getAttributes(name, attributes);
         for (Attribute a : list.asList()) {
+
             Object attrVal = a.getValue();
             if (attrVal instanceof CompositeDataSupport) {
+
                 CompositeDataSupport dataSupport = (CompositeDataSupport) attrVal;
                 result.put(a.getName(), dataSupport.values());
-
             } else {
+
                 result.put(a.getName(), attrVal);
             }
         }
