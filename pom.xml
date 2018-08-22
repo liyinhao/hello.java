@@ -12,6 +12,7 @@
         <module>example-spring</module>
         <module>example-mybatis</module>
         <module>example-druid</module>
+        <module>example-mongodb</module>
     </modules>
     <packaging>pom</packaging>
 
