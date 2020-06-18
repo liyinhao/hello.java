@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /**
- * Unit test for simple Application.
+ * Unit test for simple App.
  */
 public class AppTest {
     /**
@@ -14,11 +14,5 @@ public class AppTest {
     @Test
     public void shouldAnswerWithTrue() {
         assertTrue(true);
-    }
-
-    @Test
-    public void test(){
-        Object o = new Object();
-        System.out.println(String.valueOf(o));
     }
 }

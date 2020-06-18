@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.awt.*;
 import java.net.URI;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class Application {
 
     public static void main(String[] args) throws Exception {

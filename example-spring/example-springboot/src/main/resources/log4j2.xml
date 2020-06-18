@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="error">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd'T'HH:mm:ss.SSS} [%level] [%c:%L] [_r=#%cat] -- %m%n"/>
+        </Console>
+
+        <RollingFile name="RollingFile" fileName="logs/app.log"
+                     filePattern="logs/$${date:yyyy-MM}/web-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout pattern="%{yyyy-MM-ddTHH:mm:ss.SSS} [%level] [%c:%L] -- %m%n"/>
+            <SizeBasedTriggeringPolicy size="2MB"/>
+        </RollingFile>
+    </appenders>
+
+
+    <loggers>
+        <root level="info">
+            <appender-ref ref="RollingFile"/>
+            <appender-ref ref="Console"/>
+        </root>
+    </loggers>
+</configuration>

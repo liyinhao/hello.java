@@ -13,6 +13,7 @@
         <module>example-mybatis</module>
         <module>example-druid</module>
         <module>example-mongodb</module>
+        <module>example-influxdb</module>
     </modules>
     <packaging>pom</packaging>
 
